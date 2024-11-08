@@ -5,7 +5,7 @@
 <div align="center">
   
 
-<h3 align="center">Forum MEMPHIS</h3>
+<h1 align="center">Forum MEMPHIS</h1>
 <img src="public/img/memphisForum2_no_background.png" style="width: 50%; display: inline-block;">
 <img src="public/img/elePHPant.png" alt="PHP Elephant" style="width: 50%; display: inline-block;">
   <p align="center">
