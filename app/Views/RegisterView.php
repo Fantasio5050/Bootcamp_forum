@@ -40,7 +40,7 @@
                             <i class="fas fa-eye eye-icon" id="togglePassword"></i>
                         </div>
                     </div>
-                    <p style="display: flex; font-size: 14px; margin-left: 15%; margin-top: 1rem">Déjà inscrit ?&emsp;<a href="index.php?action=login">se connecter</a></p>
+                    <p style="display: flex; font-size: 14px; justify-content: center; margin-top: 1rem">Déjà inscrit ?&emsp;<a href="index.php?action=login">se connecter</a></p>
                     <input type="submit" class="btn" value="Créer un compte">
                 </form>
             </div>
