@@ -9,13 +9,14 @@ if (isset($_GET['action'])) {
   $act = $_GET['action'] ."Controller.php";
 }
 else{
-  $act = 'Home.php';
+  $act = 'HomeController.php';
 }
 
 //HEADER////////////////////
-include 'app/Controllers/Header.php';
+include 'app/Controllers/HeaderController.php';
 include $viewH;
 ////////////////////////////
+
 
 //CONATINER/////////////////
 if (file_exists('app/Controllers/' .$act)) {
@@ -23,13 +24,13 @@ if (file_exists('app/Controllers/' .$act)) {
   include $view;
 }
 else{
-  include 'app/Controllers/Error.php';
+  include 'app/Controllers/ErrorController.php';
   include $viewE;
 }
 ///////////////////////////
 
 //FOOTER///////////////////
-include 'App/Controllers/Footer.php';
+include 'App/Controllers/FooterController.php';
 include $viewF;
 ///////////////////////////
 
