@@ -4,15 +4,14 @@ $view = 'app/Views/TopicView.php';
 
 function Create()
 {
-    if (isset($_POST['title']) && isset($_POST['createdAt']) && isset($_SESSION['user']) && $_SESSION['user']->getId()) {
+    if (isset($_POST['title']) && isset($_SESSION['user']) && $_SESSION['user']->getId()) {
         $title = $_POST['title'];
-        $createdAt = $_POST['createdAt'];
         $userId = $_SESSION['user']->getId();
 
         $req = "INSERT INTO topics(title, created_at, user_id) VALUES (:title, :created_at, :user_id)";
         $STMT = $_SESSION['pdo']->prepare($req);
         $STMT->bindParam(':title', $title);
-        $STMT->bindParam(':created_at', $createdAt);
+        $STMT->bindParam(':created_at', date("d/m/Y H:i:s"));
         $STMT->bindParam(':user_id', $userId);
         $STMT->execute();
     }
@@ -31,8 +30,7 @@ function Retrieve($topicId)
 
 function Update($topicId)
 {
-
-    if (isset($_POST['title']) && isset($_POST['createdAt']) && isset($_SESSION['user']) && $_SESSION['user']->getId()) {
+    if (isset($_POST['title']) && isset($_SESSION['user']) && $_SESSION['user']->getId()) {
         $title = $_POST['title'];
         $createdAt = $_POST['createdAt'];
         $userId = $_SESSION['user']->getId();
@@ -40,12 +38,11 @@ function Update($topicId)
         $req = "UPDATE topics SET title = :title, created_at = :createdAt WHERE user_id = :userId AND topic_id = :topicId";
         $STMT = $_SESSION['pdo']->prepare($req);
         $STMT->bindParam(':title', $title);
-        $STMT->bindParam(':createdAt', $createdAt);
+        $STMT->bindParam(':createdAt', date("d/m/Y H:i:s"));
         $STMT->bindParam(':userId', $userId);
         $STMT->bindParam(':topicId', $topicId);
         $STMT->execute();
     }
-
 }
 
 function Delete($topicId)
@@ -69,4 +66,3 @@ function FindAll()
     $result = $STMT->fetchAll(PDO::FETCH_ASSOC);
     return $result;
 }
-?>
