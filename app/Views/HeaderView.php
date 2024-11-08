@@ -37,12 +37,12 @@ echo '
     <body>
     <nav>
         <div>
-            <a href="accueil.php">Accueil</a>
+            <a href="index.php">Accueil</a>
         </div>
         <div class="nav-links">
             <?php if(isset($_SESSION[\'username\'])): ?>
                 <span>Bienvenue, <?php echo htmlspecialchars($_SESSION[\'username\']); ?></span>
-                <a href="index.php?action=deconnexion">Déconnexion</a>
+                <a href="index.php?action=logout">Déconnexion</a>
             <?php else: ?>
                 <a href="index.php?action=Register">Inscription</a>
                 <a href="index.php?action=User">Connexion</a>

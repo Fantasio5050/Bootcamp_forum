@@ -1,11 +1,11 @@
 <?php
+include 'config/database.php';
 $pdo = $_SESSION['pdo'];
-class LogoutController
+function logout()
 {
-    public function logout()
-    {
-        session_destroy();
-        header('Location: /index.php?action=home');
-    }
-
+    session_destroy();
+    header('Location: index.php?action=topic&d=true');
 }
+
+logout();
+?>

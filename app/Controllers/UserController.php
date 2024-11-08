@@ -32,7 +32,7 @@ function ConnectUser($email, $password)
                 $user = new User($result['user_id'], $result['username'], $result['password'], $result['email']);
                 $_SESSION['user'] = $user;
 
-                header('Location:index.php?action=Register');
+                header('Location:index.php?action=topic');
             }
         }
     } catch (PDOException $e) {

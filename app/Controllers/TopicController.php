@@ -1,6 +1,10 @@
 <?php
 include 'config/database.php';
+
 $view = 'app/Views/TopicView.php';
+if($_GET['d'] == 'true'){
+    echo '<script>alert("Vous êtes déconnectés")</script>';
+}
 
 function Create()
 {
@@ -66,3 +70,4 @@ function FindAll()
     $result = $STMT->fetchAll(PDO::FETCH_ASSOC);
     return $result;
 }
+
