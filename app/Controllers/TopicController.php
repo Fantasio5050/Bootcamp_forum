@@ -2,7 +2,7 @@
 include 'config/database.php';
 
 $view = 'app/Views/TopicView.php';
-if($_GET['d'] == 'true'){
+if(isset($_GET['d']) == 'true'){
     echo '<script>alert("Vous êtes déconnectés")</script>';
 }
 
