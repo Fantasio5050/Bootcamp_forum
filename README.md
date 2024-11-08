@@ -6,8 +6,8 @@
   
 
 <h3 align="center">Forum MEMPHIS</h3>
-<img src="public/img/mephisForum2_no_background.png">
-<img src="https://www.php.net/images/logos/php-elephant.svg" alt="PHP Elephant" width="100">
+<img src="public/img/mephisForum2_no_background.png width="50%">
+<img src="public/img/elePHPant.png" alt="PHP Elephant" width="50%">
   <p align="center">
     Forum de discussion pour les étudiants de SDV codé en PHP / HTML / CSS / JS pour le Bootcamp PHP.
     <br />
@@ -16,10 +16,10 @@
 
 ### Développé avec
 
-- \[![JavaScript][JavaScript.js]][JavaScript-url]
-- \[![CSS][CSS.js]][CSS-url]
-- \[![HTML5][HTML5.js]][HTML5-url]
-- \[![PHP][PHP.js]][PHP-url][Vite-url]: https://vitejs.dev/
+- [![JavaScript][JavaScript.js]][JavaScript-url]
+- [![CSS][CSS.js]][CSS-url]
+- [![HTML5][HTML5.js]][HTML5-url]
+- [![PHP][PHP.js]][PHP-url]
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
