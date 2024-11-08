@@ -1,7 +1,5 @@
 <?php
 
-
-
     echo '
         <link rel="stylesheet" href="public/css/inscription.css">
 
@@ -42,7 +40,7 @@
                             <i class="fas fa-eye eye-icon" id="togglePassword"></i>
                         </div>
                     </div>
-                    <a href="index.php?action=login">Déjà inscrit? connectez vous</a>
+                    <p style="display: flex; font-size: 14px; margin-left: 15%; margin-top: 1rem">Déjà inscrit ?&emsp;<a href="index.php?action=login">se connecter</a></p>
                     <input type="submit" class="btn" value="Créer un compte">
                 </form>
             </div>
