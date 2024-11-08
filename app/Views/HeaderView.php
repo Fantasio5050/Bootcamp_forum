@@ -32,17 +32,27 @@ echo '
                 display: flex;
                 align-items: center;
             }
+            
+            a{
+                color: #999;
+                font-size: 0.9rem;
+                transition: .3s;
+            }
+            
+            a:hover{
+                color: #17664b;
+            }
         </style>
     </head>
     <body>
     <nav>
         <div>
-            <a href="index.php">Accueil</a>
+            <a href="index.php?action=topic">Accueil</a>
         </div>
         <div class="nav-links">
             <?php if(isset($_SESSION[\'username\'])): ?>
-                <span>Bienvenue, <?php echo htmlspecialchars($_SESSION[\'username\']); ?></span>
-                <a href="index.php?action=logout">Déconnexion</a>
+                <span><?php echo htmlspecialchars($_SESSION[\'username\']); ?></span>
+                <a href="index.php?action=deconnexion">Déconnexion</a>
             <?php else: ?>
                 <a href="index.php?action=Register">Inscription</a>
                 <a href="index.php?action=User">Connexion</a>
