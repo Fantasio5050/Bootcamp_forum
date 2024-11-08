@@ -77,7 +77,7 @@ class Comments
         $STMT->execute();
     }
 
-    function delete()
+    function Delete()
     {
         $req = "DELETE FROM comments WHERE comment_id = :commentId AND user_id = :userId AND topic_id = :topicId";
         $STMT = $this->PDO->prepare($req);
@@ -87,7 +87,7 @@ class Comments
         $STMT->execute();
     }
 
-    function findAll()
+    function FindAll()
     {
         $req = "SELECT * FROM comments WHERE topic_id = :topicId";
         $STMT = $this->PDO->prepare($req);
