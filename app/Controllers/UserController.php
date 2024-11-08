@@ -5,12 +5,12 @@ $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
 function Create()
 {
-    $emailCreate = $_POST['email'];
-    $passwordCreate = $_POST['password'];
-    $usernameCreate = $_POST['username'];
-    if (!isset($usernameCreate) || !isset($passwordCreate) || !isset($emailCreate)) {
-        return;
-    }else{
+    
+    if (isset($_POST['email']) && isset($_POST['password']) && isset($_POST['username'])) {
+        $emailCreate = $_POST['email'];
+        $passwordCreate = $_POST['password'];
+        $usernameCreate = $_POST['username'];
+
         try {
             $hash = password_hash($passwordCreate, PASSWORD_DEFAULT);
             $req = "INSERT INTO users(username, password, email) VALUES (:id, :username, :password, :email)";
