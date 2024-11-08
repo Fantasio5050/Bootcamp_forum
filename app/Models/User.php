@@ -1,6 +1,6 @@
 <?php
 
-class Artiste
+class User
 {
     private $id;
     private $username;
