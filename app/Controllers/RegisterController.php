@@ -1,5 +1,6 @@
 <?php
 
+$view = 'app/Views/RegisterView.php'
 class RegisterController{
     function Register()
     {
