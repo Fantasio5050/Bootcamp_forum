@@ -13,10 +13,9 @@ else{
 }
 
 //HEADER////////////////////
-include 'app/Controllers/header.php';
+include 'app/Controllers/Header.php';
 include $viewH;
 ////////////////////////////
-
 
 //CONATINER/////////////////
 if (file_exists('app/Controllers/' .$act)) {
