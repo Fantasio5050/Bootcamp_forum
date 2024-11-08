@@ -13,7 +13,7 @@ foreach (FindAll() as $topic) {
     echo '
         <div class="topic">
             <h3>' . htmlspecialchars($topic['title']) . '</h3>
-            <a href="index.php?action=topic&topic_id=' . htmlspecialchars($topic['topic_id']) . '" class="btn">Voir les commentaires</a>
+            <a href="index.php?action=Comments&topic_id=' . htmlspecialchars($topic['topic_id']) . '" class="btn">Voir les commentaires</a>
         </div>';
 }
 

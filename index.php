@@ -9,7 +9,7 @@ if (isset($_GET['action'])) {
   $act = $_GET['action'] ."Controller.php";
 }
 else{
-  $act = 'topicController.php';
+  $act = 'HomeController.php';
 }
 
 //CONATINER/////////////////

@@ -3,6 +3,7 @@ include 'config/database.php';
 $view = 'app/Views/LoginView.php';
 include 'app/Models/User.php';
 
+
 if (isset($_POST['email']) && isset($_POST['password'])) {
     $email = $_POST['email'];
     $password = $_POST['password'];
