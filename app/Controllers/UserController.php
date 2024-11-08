@@ -1,7 +1,13 @@
 <?php
-$view = 'app/Views/loginView.php';
+include 'config/database.php';
+$view = 'app/Views/LoginView.php';
 include 'app/Models/User.php';
 
+if (isset($_POST['email']) && isset($_POST['password'])) {
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    ConnectUser($email, $password);
+}
 
 function Retrieve($id)
 {
@@ -16,23 +22,23 @@ function Retrieve($id)
 function ConnectUser($email, $password)
 {
     try {
-        $req = "SELECT * FROM users WHERE email = :email AND password = :password";
+        $req = "SELECT * FROM users WHERE email = :email";
         $stmt = $_SESSION['pdo']->prepare($req);
         $stmt->bindParam('email', $email);
-        $stmt->bindParam('password', $password);
         $stmt->execute();
-        $result = $stmt->fetchAll();
-        if (password_verify($password, $result['password'])) {
-            echo 'Password is valid!';
-        } else {
-            echo 'Invalid password.';
+        $results = $stmt->fetchAll();
+        foreach ($results as $result){
+            if (password_verify($password, $result['password'])) {
+                $user = new User($result['user_id'], $result['username'], $result['password'], $result['email']);
+                $_SESSION['user'] = $user;
+
+                header('Location:index.php?action=Register');
+            }
         }
-        $user = new User($result['user_id'], $result['username'], $result['password'], $result['email']);
     } catch (PDOException $e) {
         echo 'Error: ' . $e->getMessage();
     }
 
-    $_SESSION['user'] = $user;
 }
 
 function Update()
