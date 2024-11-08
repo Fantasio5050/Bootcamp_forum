@@ -6,13 +6,14 @@
   
 
 <h1 align="center">Forum MEMPHIS</h1>
-<img src="public/img/memphisForum2_no_background.png" style="width: 50%; display: inline-block;">
-<img src="public/img/elePHPant.png" alt="PHP Elephant" style="width: 50%; display: inline-block;">
+<img src="public/img/memphisForum2_no_background.png" style="width: 20%; display: inline-block;">
+<img src="public/img/elePHPant.png" alt="PHP Elephant" style="width: 21%; display: inline-block;">
   <p align="center">
     Forum de discussion pour les étudiants de SDV codé en PHP / HTML / CSS / JS pour le Bootcamp PHP.
     <br />
   </p>
 </div>
+<br /><br />
 
 ### Développé avec
 
