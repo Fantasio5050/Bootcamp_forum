@@ -12,27 +12,22 @@ else{
   $act = 'HomeController.php';
 }
 
-//HEADER////////////////////
-include 'app/Controllers/HeaderController.php';
-include $viewH;
-////////////////////////////
-
-
 //CONATINER/////////////////
 if (file_exists('app/Controllers/' .$act)) {
+  //HEADER
+  include 'app/Controllers/HeaderController.php';
+  include $viewH;
+  //MAIN
   include 'app/Controllers/' .$act;
   include $view;
+  //FOOTER
+  include 'App/Controllers/FooterController.php';
+  include $viewF;
 }
 else{
   include 'app/Controllers/ErrorController.php';
   include $viewE;
 }
 ///////////////////////////
-
-//FOOTER///////////////////
-include 'App/Controllers/FooterController.php';
-include $viewF;
-///////////////////////////
-
 
  ?>
