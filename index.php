@@ -6,7 +6,7 @@ header('Pragma: no-cache');
 $act;
 
 if (isset($_GET['action'])) {
-  $act = $_GET['action'] .".php";
+  $act = $_GET['action'] ."Controller.php";
 }
 else{
   $act = 'Home.php';
