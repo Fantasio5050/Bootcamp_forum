@@ -9,7 +9,7 @@
                 <img src="public/img/bg.svg">
             </div>
             <div class="login-content">
-                <form action="index.php?action=Register" method="post" id="loginForm">
+                <form action="index.php?action=User&&def=register" method="post" id="loginForm">
                     <img src="public/img/avatar.svg">
                     <h2 class="title">Inscription</h2>
                     <div class="input-div one">

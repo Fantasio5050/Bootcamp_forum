@@ -6,7 +6,7 @@ echo '
 
         <div class="container">
             <h2>Ajouter un Topic</h2> 
-            <form action="index.php?action=AddTopic" method="post">
+            <form action="index.php?action=topic&&def=createTopic" method="post">
                 <div>
                     <label for="title">Titre:</label>
                     <input type="text" name="title" id="title" required>
